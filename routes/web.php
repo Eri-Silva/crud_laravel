@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\ItensController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,3 +16,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('PaginaInicial');
 });
+
+Route::get('inserir', [ItensController::class, 'create'])->name('criar');
+Route::post('inserir', [ItensController::class, 'store'])->name('salvar');
