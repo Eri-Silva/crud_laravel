@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>INSERIR - CRUD LARAVEL</title>
+    <title>DELETE - CRUD LARAVEL</title>
     <style>
     body {
         font-family: 'Nunito', sans-serif;
@@ -16,33 +16,36 @@
 </head>
 
 <body>
+
     <div class="container px-10">
-        <form action="{{route('salvar') }}" method="post">
+        <form action="{{ route('deletar', ['id' => $item->id]) }}" method="post">
             @csrf
             <center>
-                <h1>Formulário de um item qualquer</h1>
+                <h1>Tem certeza que deseja deletar esse item?</h1>
             </center>
 
-            <!-- Nome do item input -->
+            <!-- Nome do item -->
             <div class="form-outline mb-4">
-                <input type="text" id="form7Example1" class="form-control" name="nome" require/>
                 <label class="form-label" for="form7Example1">Nome do item</label>
+                <input type="text" id="form7Example1" class="form-control" value="{{ $item->nome }}" name="nome"/>
             </div>
 
-            <!-- Descrição do item input -->
+            <!-- Descrição do item -->
             <div class="form-outline mb-4">
-                <input type="text" id="form7Example2" class="form-control" name="descricao" require/>
-                <label class="form-label" for="form7Example2">Descrição do item</label>
+                <label class="form-label" for="form7Example1">Descrição do item</label>
+                <input type="text" id="form7Example1" class="form-control" value="{{ $item->descricao }}" name="descricao"/>
             </div>
 
-            <!-- Quantidade do item input -->
+            <!-- Quantidade do item -->
             <div class="form-outline mb-4">
-                <input type="number" id="form7Example2" class="form-control" name="quantidade" require/>
-                <label class="form-label" for="form7Example2">Quantidade do item</label>
+                <label class="form-label" for="form7Example1">Quantidade do item</label>
+                <input type="text" id="form7Example1" class="form-control" value="{{ $item->quantidade }}" name="quantidade"/>
             </div>
-            <button class="btn btn-primary">Enviar</button>
+
+            <button class="btn btn-danger">Deletar</button>
         </form>
     </div>
+
 </body>
 
 </html>

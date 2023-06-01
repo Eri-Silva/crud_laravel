@@ -20,16 +20,16 @@
                   <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
                       <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="{{route('criar')}}">Inserir</a>
+                        <a class="nav-link active" aria-current="page" href="{{url('/inserir')}}">Inserir</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Expecionar</a>
+                        <a class="nav-link active" aria-current="page" href="{{url('criar')}}">Expecionar</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Editar</a>
+                        <a class="nav-link active" aria-current="page" href="{{url('criar')}}">Editar</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Deletar</a>
+                        <a class="nav-link active" aria-current="page" href="{{url('criar')}}">Deletar</a>
                       </li>
                     </ul>
                   </div>
